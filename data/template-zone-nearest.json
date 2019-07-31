@@ -1,0 +1,34 @@
+{
+   "query":{
+        "bool": {
+            "must": {
+                "match_all": {}
+            },
+            "filter": {
+                "geo_shape": {
+                    "location": {
+			"shape": {
+			    "type":   "circle",
+			    "radius": "50km",
+                            "coordinates": [%{longitude}, %{latitude}]
+                        }
+                    }
+                }
+            }
+        }
+   },
+   "sort" : [
+        {
+            "_geo_distance" : {
+                "location_point": [%{longitude}, %{latitude}],
+                "order" : "asc",
+                "unit" : "km",
+                "mode" : "min",
+                "distance_type" : "arc",
+                "ignore_unmapped": true
+            }
+        }
+   ],
+   "_source": ["zone_id"],
+   "size": 1
+}

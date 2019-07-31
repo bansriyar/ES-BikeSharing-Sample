@@ -1,0 +1,84 @@
+{
+        "_index" : "parking_zones",
+        "_type" : "doc",
+        "_id" : "2",
+        "_score" : 1.0,
+        "_source" : {
+          "zone_id" : 2,
+          "location" : {
+            "type" : "circle",
+            "coordinates" : [
+              77.590491771698,
+              12.951342893290649
+            ],
+            "radius" : 50
+          },
+          "location_point" : [
+            77.590491771698,
+            12.951342893290649
+          ]
+        }
+      },
+      {
+        "_index" : "parking_zones",
+        "_type" : "doc",
+        "_id" : "4",
+        "_score" : 1.0,
+        "_source" : {
+          "zone_id" : 4,
+          "location" : {
+            "type" : "circle",
+            "coordinates" : [
+              77.58002042770386,
+              12.948164278657417
+            ],
+            "radius" : 100
+          },
+          "location_point" : [
+            77.58002042770386,
+            12.948164278657417
+          ]
+        }
+      },
+      {
+        "_index" : "parking_zones",
+        "_type" : "doc",
+        "_id" : "1",
+        "_score" : 1.0,
+        "_source" : {
+          "zone_id" : 1,
+          "location" : {
+            "type" : "circle",
+            "coordinates" : [
+              77.5855565071106,
+              12.95391503202572
+            ],
+            "radius" : 30
+          },
+          "location_point" : [
+            77.5855565071106,
+            12.95391503202572
+          ]
+        }
+      },
+      {
+        "_index" : "parking_zones",
+        "_type" : "doc",
+        "_id" : "3",
+        "_score" : 1.0,
+        "_source" : {
+          "zone_id" : 3,
+          "location" : {
+            "type" : "circle",
+            "coordinates" : [
+              77.58525609970093,
+              12.94391909193702
+            ],
+            "radius" : 30
+          },
+          "location_point" : [
+            77.58525609970093,
+            12.94391909193702
+          ]
+        }
+      }

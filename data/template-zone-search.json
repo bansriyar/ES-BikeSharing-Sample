@@ -1,0 +1,19 @@
+{
+   "query":{
+        "bool": {
+            "must": {
+                "match_all": {}
+            },
+            "filter": {
+                "geo_shape": {
+                    "location": {
+                        "shape": "POINT (%{longitude} %{latitude})",
+                        "relation": "intersects"
+                    }
+                }
+            }
+        }
+   },
+   "_source": ["zone_id"],
+   "size": 1
+}

@@ -1,0 +1,29 @@
+{
+   "query":{
+        "bool": {
+            "must": {
+                "match_all": {}
+            },
+            "filter": {
+                "geo_distance": {
+                    "distance": "50km",
+                    "geo_points": [%{longitude}, %{latitude}]
+                }
+            }
+        }
+   },
+    "sort" : [
+        {
+            "_geo_distance" : {
+                "center_location": [%{longitude}, %{latitude}],
+                "order" : "asc",
+                "unit" : "km",
+                "mode" : "min",
+                "distance_type" : "arc",
+                "ignore_unmapped": true
+            }
+        }
+    ],
+   "_source": ["cluster_id"],
+   "size": 1
+}
